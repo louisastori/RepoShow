@@ -1,0 +1,14 @@
+{
+  "name": "reposhow",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Generate a living developer portfolio from GitHub repositories.",
+  "scripts": {
+    "validate": "node ./src/validate-example.mjs",
+    "check": "npm run validate"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

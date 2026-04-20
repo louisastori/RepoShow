@@ -1,0 +1,8 @@
+project:
+  name: RepoShow
+  description: Generate a living developer portfolio from GitHub repositories.
+  version: 0.1.0
+
+workflow:
+  schema: spec-driven
+  activeChange: initial-mvp

@@ -1,0 +1,59 @@
+# RepoShow
+
+RepoShow is a lightweight tool for turning a developer's GitHub organization into a living project portfolio.
+
+The core idea is simple: every project stays in its own repository, while RepoShow reads only metadata, releases, APK assets, screenshots, and optional `reposhow.json` manifests. The portfolio repository stays small because it does not clone or host every project.
+
+## Goals
+
+- Build one central portfolio from many GitHub repositories.
+- Keep each project independent instead of forcing a monorepo.
+- Show recruiters useful signals quickly: purpose, stack, status, demo link, repo link, latest update, and downloadable APK when available.
+- Prefer static output so the public site can be hosted on GitHub Pages, Netlify, Vercel, or any static host.
+- Keep demo data simple: embedded JSON, `localStorage`, IndexedDB, or SQLite depending on the app. Cookies are not used as a database.
+
+## MVP Scope
+
+1. Scan repositories from a configured GitHub user or organization.
+2. Read an optional `reposhow.json` file from each repository.
+3. Merge that manifest with GitHub metadata such as description, topics, timestamps, and releases.
+4. Generate a small `projects.json` catalog.
+5. Render a static portfolio from the catalog.
+6. Detect Android APK assets from GitHub releases.
+
+## Repository Layout
+
+```text
+openspec/                 Product and technical specifications
+schemas/                  JSON schemas for RepoShow manifest files
+examples/                 Example manifest files used for validation
+src/                      Initial project scripts
+.github/workflows/        CI checks
+```
+
+## Project Manifest
+
+Repositories can opt in to better presentation by adding a `reposhow.json` file at their root. See [examples/reposhow.project.json](examples/reposhow.project.json).
+
+```json
+{
+  "$schema": "https://reposhow.dev/schemas/reposhow-project.schema.json",
+  "schemaVersion": "0.1.0",
+  "title": "Mini CRM",
+  "summary": "A small CRM demo for freelance client tracking.",
+  "status": "active",
+  "featured": true,
+  "tags": ["crm", "demo"],
+  "stack": ["React", "Node.js", "SQLite"],
+  "dataMode": "sqlite"
+}
+```
+
+## Development
+
+```bash
+npm install
+npm run validate
+```
+
+At this stage the project is intentionally specification-first. Implementation should follow the OpenSpec files in [openspec](openspec).

@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://reposhow.dev/schemas/reposhow-project.schema.json",
+  "title": "RepoShow Project Manifest",
+  "description": "Metadata used by RepoShow to present one GitHub repository in a portfolio.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "title", "summary", "status", "featured", "tags", "stack", "dataMode"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^0\\.1\\.0$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 180
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1200
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "maintenance", "experimental", "archived"]
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 32
+      },
+      "uniqueItems": true,
+      "maxItems": 12
+    },
+    "stack": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 32
+      },
+      "uniqueItems": true,
+      "maxItems": 16
+    },
+    "demoUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "screenshots": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "maxItems": 8
+    },
+    "dataMode": {
+      "type": "string",
+      "enum": ["none", "static-json", "local-storage", "indexeddb", "sqlite"]
+    },
+    "android": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabled"],
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "packageName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "apkAssetPattern": {
+          "type": "string",
+          "minLength": 1,
+          "default": "*.apk"
+        }
+      }
+    }
+  }
+}

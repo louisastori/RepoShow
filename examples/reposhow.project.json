@@ -1,0 +1,18 @@
+{
+  "$schema": "../schemas/reposhow-project.schema.json",
+  "schemaVersion": "0.1.0",
+  "title": "Mini CRM",
+  "summary": "A small CRM demo for freelance client tracking.",
+  "description": "This demo shows customer records, task follow-up, and local persistence without requiring a production backend.",
+  "status": "active",
+  "featured": true,
+  "tags": ["crm", "demo", "portfolio"],
+  "stack": ["React", "Node.js", "SQLite"],
+  "demoUrl": "https://example.com/mini-crm",
+  "screenshots": ["docs/screenshots/home.png"],
+  "dataMode": "sqlite",
+  "android": {
+    "enabled": false,
+    "apkAssetPattern": "*.apk"
+  }
+}
