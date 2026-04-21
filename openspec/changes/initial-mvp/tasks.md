@@ -20,7 +20,7 @@
 - [x] Implement manifest loading and validation.
 - [x] Implement release and APK detection.
 - [x] Generate `projects.json`.
-- [ ] Build the first static portfolio UI.
+- [x] Build the first static portfolio UI.
 
 ## 4. Automation
 

@@ -78,10 +78,16 @@ It includes:
 - the internal dashboard
 - the Mini CRM project detail view
 
-Open the HTML file directly in a browser or run:
+Check the prototype script with:
 
 ```bash
 npm run prototype:check
+```
+
+Serve the prototype so it can fetch `public/projects.json`:
+
+```bash
+npm run prototype:serve
 ```
 
 ## Local AI Quality Loop

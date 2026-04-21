@@ -11,6 +11,7 @@
     "generate:projects": "node ./src/generate-projects.mjs",
     "coverage:ai": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/run-ai-coverage.ps1",
     "prototype:check": "node --check prototype/main.js",
+    "prototype:serve": "node ./scripts/serve-prototype.mjs",
     "check": "npm run validate && npm run test && npm run coverage && npm run prototype:check",
     "quality:ai": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/run-ai-quality.ps1"
   },
