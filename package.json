@@ -9,7 +9,8 @@
     "test": "node --test test/manifest-validator.test.mjs",
     "coverage": "node --test --experimental-test-coverage test/manifest-validator.test.mjs",
     "coverage:ai": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/run-ai-coverage.ps1",
-    "check": "npm run validate && npm run test && npm run coverage",
+    "prototype:check": "node --check prototype/main.js",
+    "check": "npm run validate && npm run test && npm run coverage && npm run prototype:check",
     "quality:ai": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/run-ai-quality.ps1"
   },
   "engines": {

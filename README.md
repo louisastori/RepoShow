@@ -58,6 +58,22 @@ npm run validate
 
 At this stage the project is intentionally specification-first. Implementation should follow the OpenSpec files in [openspec](openspec).
 
+## Prototype
+
+The Stitch mockup has been reproduced as a static prototype in [prototype/index.html](prototype/index.html).
+
+It includes:
+
+- the RepoShow landing view
+- the internal dashboard
+- the Mini CRM project detail view
+
+Open the HTML file directly in a browser or run:
+
+```bash
+npm run prototype:check
+```
+
 ## Local AI Quality Loop
 
 RepoShow can run a local quality pass with Ollama and write the result to disk.

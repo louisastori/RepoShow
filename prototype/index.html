@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RepoShow Prototype</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home" data-route="home" aria-label="RepoShow accueil">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img">
+            <path d="M4 5h16v14H4zM7 9l3 3-3 3M12 15h5" />
+          </svg>
+        </span>
+        <span>repoShow</span>
+      </a>
+
+      <nav class="topnav" aria-label="Navigation principale">
+        <a href="#home" data-route="home">Accueil</a>
+        <a href="#dashboard" data-route="dashboard">Dashboard</a>
+        <a href="#project" data-route="project">Mini CRM</a>
+      </nav>
+
+      <button class="icon-button" type="button" aria-label="Menu">
+        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+          <path d="M5 7h14M5 12h14M5 17h14" />
+        </svg>
+      </button>
+    </header>
+
+    <main>
+      <section class="view is-active" data-view="home">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Nouveau: extraction automatisee d'APK</p>
+            <h1>Transformez vos projets GitHub en portfolio vivant, automatiquement.</h1>
+            <p class="hero-lead">
+              RepoShow scanne les depots, detecte les releases, les demos, les APK et les
+              metadonnees pour publier une vitrine claire sans maintenance manuelle.
+            </p>
+            <div class="actions">
+              <a class="button button-primary" href="#dashboard" data-route="dashboard">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 4v16M4 12h16" />
+                </svg>
+                Connecter GitHub
+              </a>
+              <a class="button button-secondary" href="#project" data-route="project">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+                Voir la demo
+              </a>
+            </div>
+          </div>
+
+          <div class="browser-frame" aria-label="Apercu du portfolio genere">
+            <div class="window-controls">
+              <span></span>
+              <span></span>
+              <span></span>
+              <small>reposhow.dev/louisastori</small>
+            </div>
+            <div class="portfolio-preview">
+              <div>
+                <p class="preview-label">Portfolio detecte</p>
+                <h2>24 projets</h2>
+                <p>12 actifs, 4 APK recents, 148 commits cette semaine.</p>
+              </div>
+              <div class="preview-grid">
+                <article class="mini-project visual-nebula">
+                  <span>Actif</span>
+                  <strong>Tableau de bord Nebula</strong>
+                </article>
+                <article class="mini-project visual-chip">
+                  <span>Experimental</span>
+                  <strong>Krypton Core</strong>
+                </article>
+                <article class="mini-project visual-wave">
+                  <span>Actif</span>
+                  <strong>Oasis CMS</strong>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-band">
+          <div class="section-heading">
+            <p class="eyebrow">Processus</p>
+            <h2>Comment ca marche</h2>
+          </div>
+          <div class="process-grid">
+            <article class="process-card">
+              <span class="symbol">01</span>
+              <h3>Connectez</h3>
+              <p>RepoShow lit les depots publics ou autorises avec des permissions limitees.</p>
+            </article>
+            <article class="process-card">
+              <span class="symbol">02</span>
+              <h3>Analysez</h3>
+              <p>Le moteur detecte stack, README, releases, demo URL, screenshots et APK.</p>
+            </article>
+            <article class="process-card">
+              <span class="symbol">03</span>
+              <h3>Deployeez</h3>
+              <p>Un site statique se reconstruit automatiquement sans copier les projets.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="split-section">
+          <div>
+            <p class="eyebrow">Moteur de metadonnees</p>
+            <h2>Tout est capture, rien n'est saisi manuellement.</h2>
+            <ul class="feature-list">
+              <li>Detection des artefacts APK depuis GitHub Releases.</li>
+              <li>Liens directs vers demos Vercel, Netlify ou GitHub Pages.</li>
+              <li>Activite commits et statut projet exposes en un coup d'oeil.</li>
+            </ul>
+          </div>
+          <div class="metadata-panel" aria-label="Flux de metadonnees">
+            <div class="metadata-row">
+              <span>repo</span>
+              <strong>louisastori/MiniCRM</strong>
+            </div>
+            <div class="metadata-row">
+              <span>release</span>
+              <strong>v1.2.0 / app-release.apk</strong>
+            </div>
+            <div class="metadata-row">
+              <span>stack</span>
+              <strong>React, SQLite, Tailwind</strong>
+            </div>
+            <div class="metadata-row">
+              <span>status</span>
+              <strong>active</strong>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="view dashboard-layout" data-view="dashboard">
+        <aside class="sidebar" aria-label="Navigation dashboard">
+          <div class="profile-block">
+            <div class="avatar">LA</div>
+            <strong>Louis Astori</strong>
+            <span>Architecte Pro</span>
+          </div>
+          <a class="sidebar-link is-selected" href="#dashboard" data-route="dashboard">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM7 10h4M7 14h10" /></svg>
+            Projets
+          </a>
+          <a class="sidebar-link" href="#dashboard" data-route="dashboard">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V9M12 19V5M19 19v-7" /></svg>
+            Statistiques
+          </a>
+          <a class="sidebar-link" href="#dashboard" data-route="dashboard">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l3 6 6 1-4.5 4.5L17 22l-5-3-5 3 .5-6.5L3 11l6-1z" /></svg>
+            Deploiements
+          </a>
+        </aside>
+
+        <div class="dashboard-main">
+          <section class="dashboard-header">
+            <div>
+              <p class="eyebrow">Acces interne</p>
+              <h1>Bienvenue, Developpeur</h1>
+            </div>
+            <button class="button button-primary" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16" /></svg>
+              Nouveau projet
+            </button>
+          </section>
+
+          <section class="stats-grid" aria-label="Statistiques globales">
+            <article class="stat-card">
+              <span>Total des projets</span>
+              <strong>24</strong>
+              <div class="meter"><i style="width: 100%"></i></div>
+            </article>
+            <article class="stat-card">
+              <span>Actifs actuellement</span>
+              <strong>12</strong>
+              <div class="meter"><i style="width: 50%"></i></div>
+            </article>
+            <article class="stat-card">
+              <span>Commits recents</span>
+              <strong>148</strong>
+              <small>Les 7 derniers jours</small>
+            </article>
+            <article class="stat-card">
+              <span>Dernieres APK</span>
+              <strong>04</strong>
+              <small>Pret pour la production</small>
+            </article>
+          </section>
+
+          <section class="toolbar">
+            <label class="search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 18a7.5 7.5 0 1 1 5.3-12.8 7.5 7.5 0 0 1-5.3 12.8zM16 16l4 4" /></svg>
+              <input type="search" placeholder="Rechercher une architecture, une stack..." />
+            </label>
+            <button type="button">Stack technique</button>
+            <button type="button">Statut</button>
+          </section>
+
+          <section class="project-grid">
+            <article class="project-card">
+              <div class="project-visual visual-nebula"><span>Actif</span></div>
+              <h2>Tableau de bord Nebula</h2>
+              <p>Plateforme de visualisation de donnees en temps reel pour le suivi des corps connectes.</p>
+              <div class="tag-row"><span>Next.js</span><span>Three.js</span><span>Tailwind</span></div>
+              <footer>
+                <small>Mis a jour il y a 2h</small>
+                <a href="#project" data-route="project" aria-label="Ouvrir Nebula">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </footer>
+            </article>
+
+            <article class="project-card">
+              <div class="project-visual visual-chip"><span>Experimental</span></div>
+              <h2>Krypton Core</h2>
+              <p>Couche d'authentification a faible latence construite en Rust avec edge runtime.</p>
+              <div class="tag-row"><span>Rust</span><span>WASM</span><span>Edge</span></div>
+              <footer>
+                <small>Mis a jour il y a 1j</small>
+                <a href="#project" data-route="project" aria-label="Ouvrir Krypton">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </footer>
+            </article>
+
+            <article class="project-card">
+              <div class="project-visual visual-wave"><span>Actif</span></div>
+              <h2>Oasis CMS</h2>
+              <p>Moteur de contenu headless avec livraison de medias auto-evolutive.</p>
+              <div class="tag-row"><span>TypeScript</span><span>Postgres</span></div>
+              <footer>
+                <small>Mis a jour il y a 4h</small>
+                <a href="#project" data-route="project" aria-label="Ouvrir Oasis">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </a>
+              </footer>
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <section class="view project-page" data-view="project">
+        <section class="project-hero">
+          <div class="project-hero-copy">
+            <div class="project-meta">
+              <span class="status-pill">Actif</span>
+              <span>Mis a jour : 24 oct. 2023</span>
+            </div>
+            <h1>Mini CRM</h1>
+            <p>
+              Petit CRM de demonstration pour TPE. Un gestionnaire de relation client leger,
+              axe sur les developpeurs, optimise pour les operations rapides des petites entreprises.
+            </p>
+            <div class="tag-row"><span>React 18</span><span>Node.js</span><span>SQLite</span><span>Tailwind CSS</span></div>
+            <div class="actions">
+              <button class="button button-primary" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg>
+                Demo en direct
+              </button>
+              <button class="button button-secondary" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 19c-3 1-3-1-4-2M16 22v-4a3 3 0 0 0-1-2.3c3-.3 6-1.5 6-6A4.7 4.7 0 0 0 20 6a4.4 4.4 0 0 0-.1-3s-1-.3-3 1.2A10.4 10.4 0 0 0 12 3c-1.7 0-3.3.4-4.9 1.2C5.2 2.7 4.2 3 4.2 3A4.4 4.4 0 0 0 4 6a4.7 4.7 0 0 0-1 3.7c0 4.5 3 5.7 6 6A3 3 0 0 0 8 18v4" /></svg>
+                Depot GitHub
+              </button>
+              <button class="button button-secondary" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14" /></svg>
+                Telecharger l'APK
+              </button>
+            </div>
+          </div>
+          <div class="phone-preview" aria-label="Apercu mobile Mini CRM">
+            <div class="phone-screen">
+              <small>Mini CRM</small>
+              <strong>Clients</strong>
+              <span></span><span></span><span></span>
+              <b></b><b></b><b></b>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-content">
+          <div class="doc-column">
+            <p class="eyebrow">Documentation</p>
+            <article class="content-panel">
+              <h2>Apercu du projet</h2>
+              <p>
+                Mini CRM comble le vide entre les solutions d'entreprise complexes et les
+                feuilles de calcul. Le projet presente une architecture capable de gerer
+                des centaines de clients avec des temps de reponse inferieurs a la seconde.
+              </p>
+              <div class="benefit-grid">
+                <div>
+                  <span class="symbol">01</span>
+                  <h3>Zero latence</h3>
+                  <p>Requetes SQLite optimisees et rendu concurrent React.</p>
+                </div>
+                <div>
+                  <span class="symbol">02</span>
+                  <h3>Donnees locales securisees</h3>
+                  <p>Stockage chiffre de la base de donnees avec acces local.</p>
+                </div>
+              </div>
+              <h3>Comment installer</h3>
+              <pre><code>$ git clone https://github.com/dev/mini-crm.git
+$ cd mini-crm
+$ npm install
+$ npm run dev</code></pre>
+            </article>
+          </div>
+
+          <aside class="project-aside">
+            <p class="eyebrow">Historique des versions</p>
+            <article class="release-card">
+              <strong>v1.2.0</strong>
+              <span>Il y a 2 jours</span>
+              <p>Ajout de scripts de migration SQLite et correction des comptes TPE.</p>
+            </article>
+            <article class="release-card">
+              <strong>v1.1.5</strong>
+              <span>Il y a 2 semaines</span>
+              <p>Amelioration des mises en page mobile et correction d'un bug Android.</p>
+            </article>
+            <article class="content-panel compact">
+              <h2>Informations du projet</h2>
+              <dl>
+                <div><dt>Taille du depot</dt><dd>12.4 MB</dd></div>
+                <div><dt>Tickets ouverts</dt><dd>0</dd></div>
+                <div><dt>Contributeurs</dt><dd>1</dd></div>
+              </dl>
+              <div class="meter"><i style="width: 72%"></i></div>
+              <small>72% JS</small>
+            </article>
+          </aside>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>(c) 2026 RepoShow</span>
+      <a href="#home" data-route="home">Presentation</a>
+      <a href="#dashboard" data-route="dashboard">Dashboard</a>
+      <a href="#project" data-route="project">Mini CRM</a>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
