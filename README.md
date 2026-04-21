@@ -88,3 +88,15 @@ To include cloned repositories stored in `repo/`, run:
 ```
 
 Gemma is used as a reviewer. It does not write code or push to Git automatically.
+
+For a coverage-only pass with AI review and strict 100% thresholds:
+
+```powershell
+npm run coverage:ai
+```
+
+That command writes `reports/coverage/latest.md` and `reports/coverage/latest.json`. You can lower thresholds when needed:
+
+```powershell
+.\scripts\run-ai-coverage.ps1 -MinLinePercent 90 -MinBranchPercent 85 -MinFunctionPercent 90
+```

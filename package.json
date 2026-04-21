@@ -8,6 +8,7 @@
     "validate": "node ./src/validate-example.mjs",
     "test": "node --test test/manifest-validator.test.mjs",
     "coverage": "node --test --experimental-test-coverage test/manifest-validator.test.mjs",
+    "coverage:ai": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/run-ai-coverage.ps1",
     "check": "npm run validate && npm run test && npm run coverage",
     "quality:ai": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/run-ai-quality.ps1"
   },

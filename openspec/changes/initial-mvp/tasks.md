@@ -26,5 +26,6 @@
 
 - [x] Add initial CI validation.
 - [x] Add local Ollama quality report automation.
+- [x] Add AI-assisted coverage gate automation.
 - [ ] Add scheduled portfolio refresh workflow.
 - [ ] Add deployment workflow for GitHub Pages.

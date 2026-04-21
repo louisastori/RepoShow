@@ -67,3 +67,23 @@ RepoShow SHALL NOT allow the local AI model to push Git changes automatically.
 - **WHEN** the AI recommends committing or pushing changes
 - **THEN** RepoShow records the recommendation
 - **AND** leaves the actual Git commit and push under developer control
+
+### Requirement: AI coverage gate
+
+RepoShow SHALL provide a coverage-only AI loop with configurable coverage thresholds.
+
+#### Scenario: Coverage reaches thresholds
+
+- **GIVEN** line, branch, and function coverage thresholds are configured
+- **WHEN** the coverage AI command runs
+- **THEN** RepoShow executes the coverage command
+- **AND** parses the line, branch, and function coverage summary
+- **AND** writes `reports/coverage/latest.md` and `reports/coverage/latest.json`
+- **AND** asks the local AI model for coverage-focused test recommendations
+
+#### Scenario: Coverage misses thresholds
+
+- **GIVEN** the coverage command completes below a configured threshold
+- **WHEN** the coverage AI command finishes
+- **THEN** RepoShow exits with a non-zero status
+- **AND** stores the AI recommendations for which tests should be added next

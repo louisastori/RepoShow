@@ -1,0 +1,43 @@
+﻿{
+    "generatedAt":  "2026-04-21T06:22:41.6197985+02:00",
+    "model":  "gemma4:26b",
+    "ollamaHost":  "http://127.0.0.1:11434",
+    "success":  true,
+    "thresholds":  {
+                       "linePercent":  100,
+                       "branchPercent":  100,
+                       "functionPercent":  100
+                   },
+    "coverage":  {
+                     "summary":  {
+                                     "linePercent":  100,
+                                     "branchPercent":  100,
+                                     "functionPercent":  100
+                                 },
+                     "files":  [
+                                   {
+                                       "path":  "src/manifest-validator.mjs",
+                                       "linePercent":  100,
+                                       "branchPercent":  100,
+                                       "functionPercent":  100,
+                                       "uncoveredLines":  ""
+                                   },
+                                   {
+                                       "path":  "test/manifest-validator.test.mjs",
+                                       "linePercent":  100,
+                                       "branchPercent":  100,
+                                       "functionPercent":  100,
+                                       "uncoveredLines":  ""
+                                   }
+                               ]
+                 },
+    "coverageRun":  {
+                        "command":  "npm run coverage",
+                        "exitCode":  0,
+                        "startedAt":  "2026-04-21T06:21:50.4950364+02:00",
+                        "finishedAt":  "2026-04-21T06:21:52.5639279+02:00",
+                        "durationSeconds":  2.07,
+                        "output":  "\u003e reposhow@0.1.0 coverage\n\u003e node --test --experimental-test-coverage test/manifest-validator.test.mjs\n\nTAP version 13\n# Subtest: accepts a valid project manifest\nok 1 - accepts a valid project manifest\n  ---\n  duration_ms: 1.888\n  type: \u0027test\u0027\n  ...\n# Subtest: returns the manifest when assertion succeeds\nok 2 - returns the manifest when assertion succeeds\n  ---\n  duration_ms: 0.1553\n  type: \u0027test\u0027\n  ...\n# Subtest: rejects a non-object manifest\nok 3 - rejects a non-object manifest\n  ---\n  duration_ms: 0.2102\n  type: \u0027test\u0027\n  ...\n# Subtest: rejects cookies as a demo data mode\nok 4 - rejects cookies as a demo data mode\n  ---\n  duration_ms: 0.1971\n  type: \u0027test\u0027\n  ...\n# Subtest: rejects non-array tags and stack values\nok 5 - rejects non-array tags and stack values\n  ---\n  duration_ms: 0.1041\n  type: \u0027test\u0027\n  ...\n# Subtest: rejects non-boolean featured values\nok 6 - rejects non-boolean featured values\n  ---\n  duration_ms: 0.0949\n  type: \u0027test\u0027\n  ...\n# Subtest: rejects non-object android configuration\nok 7 - rejects non-object android configuration\n  ---\n  duration_ms: 0.1804\n  type: \u0027test\u0027\n  ...\n# Subtest: requires APK asset pattern when Android support is enabled\nok 8 - requires APK asset pattern when Android support is enabled\n  ---\n  duration_ms: 0.2159\n  type: \u0027test\u0027\n  ...\n# Subtest: throws a readable validation error\nok 9 - throws a readable validation error\n  ---\n  duration_ms: 0.525\n  type: \u0027test\u0027\n  ...\n1..9\n# tests 9\n# suites 0\n# pass 9\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 108.205\n# start of coverage report\n# -----------------------------------------------------------------------------\n# file                         | line % | branch % | funcs % | uncovered lines\n# -----------------------------------------------------------------------------\n# src                          |        |          |         | \n#  manifest-validator.mjs      | 100.00 |   100.00 |  100.00 | \n# test                         |        |          |         | \n#  manifest-validator.test.mjs | 100.00 |   100.00 |  100.00 | \n# -----------------------------------------------------------------------------\n# all files                    | 100.00 |   100.00 |  100.00 | \n# -----------------------------------------------------------------------------\n# end of coverage report"
+                    },
+    "aiReview":  "1. **Verdict coverage** : ✅ Pass\n2. **Seuils demandés / valeurs obtenues** : Lignes/Branches/Fonctions : 100% / 100%\n3. **Lignes non couvertes** : Aucune\n4. **Tests à ajouter** : Aucun nécessaire\n5. **Commandes à relancer** : `npm run coverage`\n6. **Décision Git** : ✅ Push autorisé"
+}
