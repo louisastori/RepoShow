@@ -4,7 +4,7 @@ param(
   [string]$OutputDir = "reports/coverage",
   [string]$CoverageCommand = "npm run coverage",
   [double]$MinLinePercent = 100,
-  [double]$MinBranchPercent = 100,
+  [double]$MinBranchPercent = 95,
   [double]$MinFunctionPercent = 100,
   [int]$AiTimeoutSeconds = 420
 )

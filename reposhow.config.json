@@ -1,0 +1,15 @@
+{
+  "$schema": "./schemas/reposhow-config.schema.json",
+  "schemaVersion": "0.1.0",
+  "github": {
+    "owner": "louisastori",
+    "ownerType": "user",
+    "visibility": "public",
+    "manifestPath": "reposhow.json",
+    "includeArchived": false,
+    "includeForks": false
+  },
+  "output": {
+    "projectsPath": "public/projects.json"
+  }
+}

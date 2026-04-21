@@ -15,11 +15,11 @@
 
 ## 3. Implementation
 
-- [ ] Add GitHub owner configuration.
-- [ ] Implement repository discovery.
-- [ ] Implement manifest loading and validation.
-- [ ] Implement release and APK detection.
-- [ ] Generate `projects.json`.
+- [x] Add GitHub owner configuration.
+- [x] Implement repository discovery.
+- [x] Implement manifest loading and validation.
+- [x] Implement release and APK detection.
+- [x] Generate `projects.json`.
 - [ ] Build the first static portfolio UI.
 
 ## 4. Automation

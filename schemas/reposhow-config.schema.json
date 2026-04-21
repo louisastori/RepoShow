@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://reposhow.dev/schemas/reposhow-config.schema.json",
+  "title": "RepoShow Configuration",
+  "description": "Configuration used by RepoShow to scan GitHub and write the generated project catalog.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "github", "output"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^0\\.1\\.0$"
+    },
+    "github": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner", "ownerType", "visibility", "manifestPath", "includeArchived", "includeForks"],
+      "properties": {
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ownerType": {
+          "type": "string",
+          "enum": ["user", "organization"]
+        },
+        "visibility": {
+          "type": "string",
+          "enum": ["public"]
+        },
+        "manifestPath": {
+          "type": "string",
+          "minLength": 1,
+          "default": "reposhow.json"
+        },
+        "includeArchived": {
+          "type": "boolean",
+          "default": false
+        },
+        "includeForks": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["projectsPath"],
+      "properties": {
+        "projectsPath": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

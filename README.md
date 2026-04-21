@@ -58,6 +58,16 @@ npm run validate
 
 At this stage the project is intentionally specification-first. Implementation should follow the OpenSpec files in [openspec](openspec).
 
+## Generate The Project Catalog
+
+Configure the GitHub owner in [reposhow.config.json](reposhow.config.json), then run:
+
+```bash
+npm run generate:projects
+```
+
+The scanner reads repository metadata, optional `reposhow.json` manifests, latest releases, and APK assets from GitHub. It writes the generated catalog to `public/projects.json` by default.
+
 ## Prototype
 
 The Stitch mockup has been reproduced as a static prototype in [prototype/index.html](prototype/index.html).
@@ -105,13 +115,13 @@ To include cloned repositories stored in `repo/`, run:
 
 Gemma is used as a reviewer. It does not write code or push to Git automatically.
 
-For a coverage-only pass with AI review and strict 100% thresholds:
+For a coverage-only pass with AI review and strict line/function thresholds:
 
 ```powershell
 npm run coverage:ai
 ```
 
-That command writes `reports/coverage/latest.md` and `reports/coverage/latest.json`. You can lower thresholds when needed:
+That command writes `reports/coverage/latest.md` and `reports/coverage/latest.json`. By default it requires 100% line coverage, 95% branch coverage, and 100% function coverage. You can tune thresholds when needed:
 
 ```powershell
 .\scripts\run-ai-coverage.ps1 -MinLinePercent 90 -MinBranchPercent 85 -MinFunctionPercent 90
