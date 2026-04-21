@@ -18,5 +18,5 @@ jobs:
         with:
           node-version: 22
 
-      - name: Validate project files
-        run: npm run validate
+      - name: Validate, test, and cover
+        run: npm run check

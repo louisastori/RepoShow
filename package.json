@@ -6,7 +6,10 @@
   "description": "Generate a living developer portfolio from GitHub repositories.",
   "scripts": {
     "validate": "node ./src/validate-example.mjs",
-    "check": "npm run validate"
+    "test": "node --test test/manifest-validator.test.mjs",
+    "coverage": "node --test --experimental-test-coverage test/manifest-validator.test.mjs",
+    "check": "npm run validate && npm run test && npm run coverage",
+    "quality:ai": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/run-ai-quality.ps1"
   },
   "engines": {
     "node": ">=20"

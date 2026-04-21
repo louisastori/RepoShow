@@ -57,3 +57,34 @@ npm run validate
 ```
 
 At this stage the project is intentionally specification-first. Implementation should follow the OpenSpec files in [openspec](openspec).
+
+## Local AI Quality Loop
+
+RepoShow can run a local quality pass with Ollama and write the result to disk.
+
+Prerequisites:
+
+- Ollama installed locally.
+- The `gemma4:26b` model available in Ollama.
+- Node.js 20 or newer.
+
+Run:
+
+```powershell
+npm run quality:ai
+```
+
+The command:
+
+1. Starts Ollama if the API is not already responding.
+2. Runs validation, unit tests, coverage, and OpenSpec validation.
+3. Writes the latest report to `reports/quality/latest.md` and `reports/quality/latest.json`.
+4. Sends the report to Gemma so it can recommend which tests to strengthen next.
+
+To include cloned repositories stored in `repo/`, run:
+
+```powershell
+.\scripts\run-ai-quality.ps1 -IncludeClonedRepos
+```
+
+Gemma is used as a reviewer. It does not write code or push to Git automatically.

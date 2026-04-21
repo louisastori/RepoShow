@@ -1,0 +1,58 @@
+﻿{
+    "generatedAt":  "2026-04-21T05:39:40.8894495+02:00",
+    "model":  "gemma4:26b",
+    "ollamaHost":  "http://127.0.0.1:11434",
+    "includeClonedRepos":  false,
+    "success":  true,
+    "failedCommandCount":  0,
+    "results":  [
+                    {
+                        "target":  "RepoShow",
+                        "path":  "C:\\Users\\louis\\Desktop\\RepoShow",
+                        "skipped":  false,
+                        "commands":  [
+                                         {
+                                             "name":  "manifest validation",
+                                             "command":  "npm run validate",
+                                             "directory":  "C:\\Users\\louis\\Desktop\\RepoShow",
+                                             "exitCode":  0,
+                                             "startedAt":  "2026-04-21T05:39:34.6162821+02:00",
+                                             "finishedAt":  "2026-04-21T05:39:35.6911311+02:00",
+                                             "durationSeconds":  1.07,
+                                             "output":  "\u003e reposhow@0.1.0 validate\n\u003e node ./src/validate-example.mjs\n\nRepoShow example manifest is valid."
+                                         },
+                                         {
+                                             "name":  "unit tests",
+                                             "command":  "npm run test",
+                                             "directory":  "C:\\Users\\louis\\Desktop\\RepoShow",
+                                             "exitCode":  0,
+                                             "startedAt":  "2026-04-21T05:39:35.7023934+02:00",
+                                             "finishedAt":  "2026-04-21T05:39:36.7481056+02:00",
+                                             "durationSeconds":  1.05,
+                                             "output":  "\u003e reposhow@0.1.0 test\n\u003e node --test test/manifest-validator.test.mjs\n\nTAP version 13\n# Subtest: accepts a valid project manifest\nok 1 - accepts a valid project manifest\n  ---\n  duration_ms: 1.6462\n  type: \u0027test\u0027\n  ...\n# Subtest: returns the manifest when assertion succeeds\nok 2 - returns the manifest when assertion succeeds\n  ---\n  duration_ms: 0.1725\n  type: \u0027test\u0027\n  ...\n# Subtest: rejects a non-object manifest\nok 3 - rejects a non-object manifest\n  ---\n  duration_ms: 0.1976\n  type: \u0027test\u0027\n  ...\n# Subtest: rejects cookies as a demo data mode\nok 4 - rejects cookies as a demo data mode\n  ---\n  duration_ms: 0.9082\n  type: \u0027test\u0027\n  ...\n# Subtest: requires APK asset pattern when Android support is enabled\nok 5 - requires APK asset pattern when Android support is enabled\n  ---\n  duration_ms: 0.2809\n  type: \u0027test\u0027\n  ...\n# Subtest: throws a readable validation error\nok 6 - throws a readable validation error\n  ---\n  duration_ms: 0.5523\n  type: \u0027test\u0027\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 91.5339"
+                                         },
+                                         {
+                                             "name":  "coverage",
+                                             "command":  "npm run coverage",
+                                             "directory":  "C:\\Users\\louis\\Desktop\\RepoShow",
+                                             "exitCode":  0,
+                                             "startedAt":  "2026-04-21T05:39:36.7501170+02:00",
+                                             "finishedAt":  "2026-04-21T05:39:37.7925839+02:00",
+                                             "durationSeconds":  1.04,
+                                             "output":  "\u003e reposhow@0.1.0 coverage\n\u003e node --test --experimental-test-coverage test/manifest-validator.test.mjs\n\nTAP version 13\n# Subtest: accepts a valid project manifest\nok 1 - accepts a valid project manifest\n  ---\n  duration_ms: 3.0464\n  type: \u0027test\u0027\n  ...\n# Subtest: returns the manifest when assertion succeeds\nok 2 - returns the manifest when assertion succeeds\n  ---\n  duration_ms: 0.1982\n  type: \u0027test\u0027\n  ...\n# Subtest: rejects a non-object manifest\nok 3 - rejects a non-object manifest\n  ---\n  duration_ms: 0.2194\n  type: \u0027test\u0027\n  ...\n# Subtest: rejects cookies as a demo data mode\nok 4 - rejects cookies as a demo data mode\n  ---\n  duration_ms: 0.204\n  type: \u0027test\u0027\n  ...\n# Subtest: requires APK asset pattern when Android support is enabled\nok 5 - requires APK asset pattern when Android support is enabled\n  ---\n  duration_ms: 0.1168\n  type: \u0027test\u0027\n  ...\n# Subtest: throws a readable validation error\nok 6 - throws a readable validation error\n  ---\n  duration_ms: 0.4614\n  type: \u0027test\u0027\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 104.9175\n# start of coverage report\n# -----------------------------------------------------------------------------\n# file                         | line % | branch % | funcs % | uncovered lines\n# -----------------------------------------------------------------------------\n# src                          |        |          |         | \n#  manifest-validator.mjs      | 100.00 |   100.00 |  100.00 | \n# test                         |        |          |         | \n#  manifest-validator.test.mjs | 100.00 |   100.00 |  100.00 | \n# -----------------------------------------------------------------------------\n# all files                    | 100.00 |   100.00 |  100.00 | \n# -----------------------------------------------------------------------------\n# end of coverage report"
+                                         },
+                                         {
+                                             "name":  "openspec validation",
+                                             "command":  "npx @fission-ai/openspec@latest validate --all",
+                                             "directory":  "C:\\Users\\louis\\Desktop\\RepoShow",
+                                             "exitCode":  0,
+                                             "startedAt":  "2026-04-21T05:39:37.7940880+02:00",
+                                             "finishedAt":  "2026-04-21T05:39:40.8788413+02:00",
+                                             "durationSeconds":  3.08,
+                                             "output":  "✓ spec/github-source\n✓ change/initial-mvp\n✓ spec/local-ai-quality\n✓ spec/project-metadata\n✓ spec/release-assets\n✓ spec/static-portfolio\nTotals: 6 passed, 0 failed (6 items)\n\n- Validating..."
+                                         }
+                                     ]
+                    }
+                ],
+    "aiReview":  "Voici le rapport de qualité pour **RepoShow** :\n\n1. **Verdict court**\n   **Excellent.** Le dépôt est dans un état de stabilité parfaite avec une couverture maximale.\n\n2. **Tests ou suites qui passent**\n   * **Validation du manifeste** : `npm run validate` (Réussi).\n   * **Tests unitaires** : 6/6 tests réussis (`npm run test`).\n   * **Couverture de code** : 100% (Lignes, branches et fonctions) sur `manifest-validator.mjs` (`npm run coverage`).\n   * **Validation OpenSpec** : 6/6 spécifications validées (`openspec validation`).\n\n3. **Echecs ou manques de coverage**\n   * Aucun échec détecté.\n   * La couverture est actuellement de 100% sur le périmètre testé.\n\n4. **Tests à ajouter en priorité**\n   * Étant donné que le module `manifest-validator.mjs` est déjà totalement couvert, la priorité est d\u0027étendre la suite de tests vers de nouveaux modules ou de nouveaux fichiers sources dès leur création pour maintenir ce standard de 100%.\n\n5. **Commandes exactes à relancer**\n   * `npm run validate`\n   * `npm run test`\n   * `npm run coverage`\n   * `npx @fission-ai/openspec@latest validate --all`\n\n6. **Recommendation Git**\n   **Un commit et un push sont tout à fait raisonnables.** Le code est validé, testé et couvert."
+}

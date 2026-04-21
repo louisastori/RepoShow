@@ -25,5 +25,6 @@
 ## 4. Automation
 
 - [x] Add initial CI validation.
+- [x] Add local Ollama quality report automation.
 - [ ] Add scheduled portfolio refresh workflow.
 - [ ] Add deployment workflow for GitHub Pages.

@@ -8,5 +8,6 @@ build/
 !.env.example
 coverage/
 *.log
+.tmp/
 repo/
 repos/
